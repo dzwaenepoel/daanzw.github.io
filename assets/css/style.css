@@ -1,0 +1,126 @@
+/*fonts*/
+@font-face {
+    font-family: source-code;
+    src: url(../font/source-code-pro/SourceCodePro-Light.otf);
+}
+
+
+
+header{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+	 /*second option*/
+
+	/*  border-bottom-style: solid;
+	  border-color: #2d2d2d;
+	  border-width: 0.5px;*/
+	  
+	  position: fixed;
+	  width: 100%;
+	  float: left;
+	  z-index: 100;
+	  background: #fff;
+
+}
+h1 a{
+	float: left;
+	width: 100px;
+  height: 100px;
+  background-size: 62%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  background-image: url( ../img/daanlogo.png);
+}
+.header-link{
+	float: right;
+	width: 73%;
+
+}
+.header-link-li{
+	margin-top: 36px;
+	float: left;
+	margin-right: 11%;
+
+
+}
+.header-link a{
+	text-decoration:none;  
+	color: #2d2d2d;
+	font-family: source-code;
+	font-size: 24px;
+
+}
+li{
+	list-style: none;
+}
+
+.content{
+
+
+}
+.intro{
+	background: #2d2d2d;
+	height: 700px;
+	float: left;
+	width: 100%;
+	color: #fff;
+	font-size: 23px;
+	font-family: source-code;
+	line-height: 150%;
+
+
+
+}
+
+.rest{
+	height: 1000px;
+	float: left;
+	width: 100%;
+}
+.terminal-window{
+	margin-left: 10%;
+}
+.terminal{
+	margin-top: 200px;
+
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.results{
+	display: none;
+
+}
+.results a {
+	color: #fff;
+}
+
+
+
+
+
+
+
+

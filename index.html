@@ -1,9 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>daan.ninja</title>
+	<title>daan</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/start.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 </head>
 <body>
-<p>hello world</p>
+	<header>
+		<div class="wrapper ">
+			<h1>
+				<a href="#"></a>
+			</h1>
+			<ul class="header-link" >
+				<li class="header-link-li"><a href="#">about</a></li>
+				<li class="header-link-li"><a href="#">social</a></li>
+				<li class="header-link-li"><a href="#">projects</a></li>
+				<li class="header-link-li"><a href="#">contact</a></li>
+
+			</ul>
+		</div>
+	</header>
+	<section class="content ">
+	<div class="intro">
+		<div class="wrapper">
+			<div class="terminal-window">
+				<p class="terminal">$ <span class="type-start"></span> <span class="mistype"></span></p>
+				<div class="results">
+					<p>total 4</p>
+					<p>drwxr-xr-x daan.ninja <a href="#">about</a></p>
+					<p>-rw-r--r-- daan.ninja <a href="#">social</a></p>
+					<p>drwxrwxr-x daan.ninja <a href="#">projects</a></p>
+					<p>drwxrwxrwx daan.ninja <a href="#">contact</a></p>
+					<p class="end" >$ </p>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	<div class="rest">
+		
+	</div>
+
+		
+	</section>
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="./bower_components/typed.js/dist/typed.min.js"></script>
+	<script>
+    $(function(){
+        $(".type-start").typed({
+            strings: ["Hello world <br> $ I am daan a"],
+            typeSpeed: 15,
+             callback: function() {
+             	$('.typed-cursor').remove();
+	            $(".mistype").typed({
+            		strings: ["student","scout" ,"developer from Belgium <br> $ Take a look around and discover more about me... <br> $ ls -al ./"],
+            		typeSpeed: 15,
+            		callback: function() {
+            			$('.typed-cursor').remove();
+            			$( ".end" ).append( '<span class="typed-cursor">|</span>' );
+
+            			$('.results').show();
+            		}
+
+       			 });	
+             },
+        });
+                   
+
+    });
+</script>
 </body>
 </html>
