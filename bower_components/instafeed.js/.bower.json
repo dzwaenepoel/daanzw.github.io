@@ -1,0 +1,37 @@
+{
+  "name": "instafeed.js",
+  "main": "instafeed.js",
+  "description": "A simple Instagram javascript plugin.",
+  "version": "1.4.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:stevenschobert/instafeed.js.git"
+  },
+  "homepage": "http://instafeedjs.com/",
+  "authors": [
+    "Steven Schobert <spschobert@gmail.com>"
+  ],
+  "keywords": [
+    "javascript",
+    "instagram"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "src",
+    "test",
+    "*.yml",
+    "package.json",
+    "Makefile"
+  ],
+  "_release": "1.4.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.4.1",
+    "commit": "61cc8610ee3332a72abaeade98a6d5235eedef28"
+  },
+  "_source": "https://github.com/stevenschobert/instafeed.js.git",
+  "_target": "^1.4.1",
+  "_originalSource": "instafeed.js",
+  "_direct": true
+}

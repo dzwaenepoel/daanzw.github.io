@@ -13,8 +13,8 @@
 				<a href="#"></a>
 			</h1>
 			<ul class="header-link" >
-				<li class="header-link-li"><a href="#">about</a></li>
-				<li class="header-link-li"><a href="#">social</a></li>
+				<li class="header-link-li"><a id="about-link" href="#">about</a></li>
+				<li class="header-link-li"><a id="social-link" href="#">social</a></li>
 				<li class="header-link-li"><a href="#">projects</a></li>
 				<li class="header-link-li"><a href="#">contact</a></li>
 
@@ -22,31 +22,67 @@
 		</div>
 	</header>
 	<section class="content ">
-	<div class="intro">
-		<div class="wrapper">
-			<div class="terminal-window">
-				<p class="terminal">$ <span class="type-start"></span> <span class="mistype"></span></p>
-				<div class="results">
-					<p>total 4</p>
-					<p>drwxr-xr-x daan.ninja <a href="#">about</a></p>
-					<p>-rw-r--r-- daan.ninja <a href="#">social</a></p>
-					<p>drwxrwxr-x daan.ninja <a href="#">projects</a></p>
-					<p>drwxrwxrwx daan.ninja <a href="#">contact</a></p>
-					<p class="end" >$ </p>
+
+		<section class="intro ">
+			<div class="wrapper">
+				<div class="terminal-window">
+					<p class="terminal">$ <span class="type-start"></span> <span class="mistype"></span></p>
+					<div class="results">
+						<p>total 4</p>
+						<p>drwxr-xr-x daan.ninja <a id="about-link" href="#">about</a></p>
+						<p>-rw-r--r-- daan.ninja <a href="#">social</a></p>
+						<p>drwxrwxr-x daan.ninja <a href="#">projects</a></p>
+						<p>drwxrwxrwx daan.ninja <a href="#">contact</a></p>
+						<p class="end" >$ </p>
+					</div>
+				</div>
+
+
+			</div>
+		</section>
+
+		<section class="about">
+			<div class="wrapper ">
+				<div class="about-content">
+					<h2>About me </h2>
+					<img src="#">
+					<p>sqdfqsdqsdqsdqsdsqdqsd</p>
+					<p>sqdqsdqsdsqdqsdqsdqsd</p>
+					<p>dqsdqdsqdsqdqsdqsdqsdqsd</p>
+				</div>		
+			</div>
+					
+
+		</section>
+
+		<section class="social">
+			<div class="wrapper">
+				<div class="social-content">
+					<h3>Social</h3>
+					<div id="instafeed"></div>
+
 				</div>
 			</div>
+			
+		</section>
 
+		<section class="projects">
+			<div class="wrapper">
+				<div class="projects-content">
+					
 
-		</div>
-	</div>
-	<div class="rest">
-		
-	</div>
+				</div>
+			</div>
+			
+		</section>
+
 
 		
 	</section>
 	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="./bower_components/typed.js/dist/typed.min.js"></script>
+	<script src="./bower_components/instafeed.js/instafeed.min.js"></script>
+
 	<script>
     $(function(){
         $(".type-start").typed({
@@ -67,7 +103,39 @@
        			 });	
              },
         });
-                   
+
+        $( window ).scroll(function() {
+  			// console.log($('.about').scrollTop());
+
+   			$('.terminal-window').css({
+      			'top' : -($(this).scrollTop()/4)+"px"
+   			}); 
+   			$('.social').css({
+      			'top' : -($(this).scrollTop()/4)+"px"
+   			}); 
+		});
+
+
+		$( "#about-link" ).click(function() {
+  			$('html, body').animate({
+    			scrollTop: $('.about-content:visible:first').offset().top + (-120)
+			}, 1000 , 'swing');
+		});
+		$( "#social-link" ).click(function() {
+  			$('html, body').animate({
+    			scrollTop: $('.social:visible:first').offset().top + (-120)
+			}, 1000 , 'swing');
+		});
+
+		var feed = new Instafeed({
+			target: 'instafeed',
+        	get: 'user',
+        	userId: '3233577920',
+        	accessToken: '3233577920.04d091c.7607b19105144339bf1dfc4b7ee82717',
+        	clientId: '	04d091cf0e6d487ca706c4b04d2c0c6c',
+        	template: '<a class="animation" href="{{link}}"><img src="{{image}}" /></a><p>{{caption}}<p>'
+    	});
+    	feed.run();                   
 
     });
 </script>
