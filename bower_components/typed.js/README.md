@@ -37,7 +37,6 @@ This is really all you need to get going.
 bower install typed.js
 ~~~
 
-
 Want the animated blinking cursor? Add this CSS.
 
 ~~~ scss
@@ -64,6 +63,37 @@ Want the animated blinking cursor? Add this CSS.
 }
 ~~~
 
+Wonderful sites using Typed.js
+---
+https://slack.com/
+
+https://envato.com/
+
+https://productmap.co/
+
+https://www.typed.com/
+
+https://git.market/
+
+http://allison.house/404
+
+http://www.maxcdn.com/
+
+https://commando.io/
+
+http://testdouble.com/agency.html
+
+http://www.stephanemartinw.com/
+
+http://www.trelab.fi/en/
+
+http://jessejohnson.github.io/
+
+http://patrickelhage.com/
+
+http://tairemadailey.com/
+
+
 ### HTML tags
 
 By default the content type is set to `html`, so you're good to go. Want to type out the html regularly? Set it to `text`.
@@ -73,6 +103,28 @@ $(".element").typed({
 	strings: ["Typed.js is a <strong>jQuery</strong> plugin."],
 	contentType: 'html' // or 'text'
 });
+~~~
+
+### Strings from static HTML (SEO Friendly)
+Rather than using the `strings` array to insert strings, you can place an HTML `div` on the page and read from it.
+This allows bots and search engines, as well as users with JavaScript disabled, to see your text on the page.
+
+~~~ javascript
+<script>
+	$(function(){
+		$("#typed").typed({
+			stringsElement: $('#typed-strings')
+		});
+	});
+</script>
+~~~
+You must wrap each string in the `typed-strings` div with a `<p>`
+~~~ html
+<div id="typed-strings">
+    <p>Typed.js is a <strong>jQuery</strong> plugin.</p>
+    <p>It <em>types</em> out sentences.</p>
+</div>
+<span id="typed"></span>
 ~~~
 
 ### Line Breaks
@@ -121,12 +173,16 @@ Customization
 	$(function(){
 		$(".element").typed({
 			strings: ["First sentence.", "Second sentence."],
+			// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+			stringsElement: null,
 			// typing speed
 			typeSpeed: 0,
 			// time before typing starts
 			startDelay: 0,
 			// backspacing speed
 			backSpeed: 0,
+			// shuffle the strings
+ +        		shuffle: false,
 			// time before backspacing
 			backDelay: 500,
 			// loop
@@ -181,27 +237,6 @@ Want to get really custom? On my site and in the Typed.js demo I have the code t
 ~~~
 
 This checks if the `arrayPos` is `1`, which would be the second string you entered. If so, it sets `stopNum` to `3` instead of `0`, which tells it to stop when there are 3 characters left. For now you'll have to create custom `if` statements for each specific case you want. I may automate this somehow in the future.
-
-
-Wonderfull sites using Typed.js
----
-http://allison.house/404
-
-http://www.maxcdn.com/
-
-https://commando.io/
-
-http://testdouble.com/agency.html
-
-http://www.stephanemartinw.com/
-
-http://www.trelab.fi/en/
-
-http://jessejohnson.github.io/
-
-http://patrickelhage.com/
-
-http://tairemadailey.com/
 
 
 ## Development

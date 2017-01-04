@@ -1,0 +1,99 @@
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./bower_components/typed.js/dist/typed.min.js"></script>
+<script src="./bower_components/instafeed.js/instafeed.min.js"></script>
+<script type="text/javascript">
+	 $(".type-start").typed({
+            strings: ["Hello world <br> $ Ik ben Daan een"],
+            typeSpeed: 15,
+             callback: function() {
+             	$('.typed-cursor').remove();
+	            $(".mistype").typed({
+            		strings: ["student","scout" ,"developer  en freelancer <br> $ Neem een kijke en ontdek meer over mij<br> $ ls -al ./"],
+            		typeSpeed: 15,
+            		callback: function() {
+            			$('.typed-cursor').remove();
+            			$( ".end" ).append( '<span class="typed-cursor">|</span>' );
+
+            			$('.results').show();
+            		}
+
+       			 });	
+             },
+        });
+
+
+
+
+
+	 var feed = new Instafeed({
+        	get: 'user',
+        	userId: '3233577920',
+        	accessToken: '3233577920.04d091c.7607b19105144339bf1dfc4b7ee82717',
+        	clientId: '	04d091cf0e6d487ca706c4b04d2c0c6c',
+        	resolution: 'low_resolution',
+        	success: function (e) {
+        		// $('.photo-frame').width(e.data[0].images.low_resolution.width);
+        		// $('.insta-img').width(e.data[0].images.low_resolution.width)
+        		$(".insta-img").attr("src",e.data[0].images.low_resolution.url);
+
+
+        			$(".comments-text").text(e.data[0].caption.text);
+        		var prevx=0;
+        		setInterval(function() {
+        			do {
+    					var x = Math.floor((Math.random() * e.data.length));
+					}
+					while ( x == prevx);
+        			
+        			$(".insta-img").attr("src",e.data[x].images.low_resolution.url);
+		 			$(".comments-text").text(e.data[x].caption.text);
+
+        		
+    
+        			prevx = x;
+        		}, 4000);
+
+        	}
+    	});
+
+    	feed.run();
+
+
+    	function validateForm()
+    	{
+    		var a=document.forms["Form"]["name"].value;
+    		var b=document.forms["Form"]["_replyto"].value;
+    		var c=document.forms["Form"]["_subject"].value;
+    		var d=document.forms["Form"]["_message"].value;
+    		if (a==null || a=="",b==null || b=="",c==null || c=="",d==null || d=="")
+      		{
+      			alert("Please Fill All Required Field");
+      			 return false;
+      		}
+    	}
+
+
+    	$( ".projects-link" ).click(function() {
+  			$('html, body').animate({
+    			scrollTop: $('.projects:visible:first').offset().top - 30
+			}, 1000 , 'swing');
+		});
+		$( ".service-link" ).click(function() {
+  			$('html, body').animate({
+    			scrollTop: $('.service:visible:first').offset().top - 30
+			}, 1000 , 'swing');
+		});
+		$( ".about-link" ).click(function() {
+  			$('html, body').animate({
+    			scrollTop: $('.about:visible:first').offset().top - 30
+			}, 1000 , 'swing');
+		});
+		$( ".contact-link" ).click(function() {
+  			$('html, body').animate({
+    			scrollTop: $('.contact:visible:first').offset().top - 30
+			}, 1000 , 'swing');
+		});
+
+
+
+</script>
