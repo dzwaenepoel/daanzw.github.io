@@ -517,14 +517,14 @@ body > * {
 
 /*footer*/
 
-footer{
+.footer{
 	height: 40px;
 	background-color: #2d2d2d;
 	color: #fff;
 	font-family: source-code;
 	
 }
-footer p{
+.footer p{
 	
 	float: left;
 	width: 98%;
@@ -533,7 +533,7 @@ footer p{
 	margin-top: 10px;
 
 }
-footer a{
+.footer a{
 	color: #fff;
 	text-decoration: underline;
 
