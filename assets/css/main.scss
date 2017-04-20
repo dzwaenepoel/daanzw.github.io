@@ -88,11 +88,11 @@ body > * {
 }
 /*titles*/
 .title{
-	margin-bottom: 20px;
+	margin-bottom: 18px;
 	margin-left: 4%;
 	color:#2d2d2d;
 	font-family: source-code-hard;
-	font-size: 17px;
+	font-size: 22px;
 }
 .borderbut{
 	 border-bottom-style: solid;
@@ -117,9 +117,9 @@ body > * {
 .intro{
 	background: #2d2d2d;
 	color: #f2f2f2;
-	height: 380px;
+	height: 450px;
 	width: 100%;
-	font-size: 15px;
+	font-size: 18px;
 	font-family: source-code;
 	line-height: 150%;
 	padding-top: 45px;
@@ -171,7 +171,7 @@ body > * {
 	margin-left: 10%;
 	margin-bottom: 10%;
 	width: 80%;
-	height: 400px;
+	height: 460px;
 	border: solid;
 	border-width: 1px;
 	border-color: rgba(150,150,150,0.3137254901960784);
@@ -200,7 +200,7 @@ body > * {
 	width: 100%;
 }
 .service-title{
-	font-size: 15px;
+	font-size: 18px;
 	color:#2d2d2d;
 	font-family: source-code-hard;
 
@@ -210,7 +210,8 @@ body > * {
 }
 
 .service-content{
-	font-size: 11px;
+	line-height: 21px;
+	font-size: 15px;
 	color:#2d2d2d;
 	font-family: source-code;
 
@@ -228,13 +229,13 @@ body > * {
 	color:#2d2d2d;
 	margin-bottom: 20px;
  }
- @media screen and (min-width: 500px) {
+ @media screen and (min-width: 555px) {
 	.card{
 
 	margin-left: 4%;
 	margin-bottom: 5%;
 	width: 44%;
-	height: 400px;
+	height: 490px;
 	float: left;
 
 	}
@@ -261,7 +262,7 @@ body > * {
  	}
 	.card{
 		width: 28%;
-		height: 400px;
+		height: 550px;
 		margin-left: 0%;
 	}
 	.mid-card{
@@ -270,6 +271,12 @@ body > * {
 	}
 	.left-card{
 		margin-left: 6%;
+	}
+}
+@media screen and (min-width: 875px) {
+	
+	.card{
+		height: 480px;
 	}
 	
   
@@ -280,12 +287,10 @@ body > * {
 .totem{
 	color: #2d2d2d;
 }
-.daan{
-	margin-top: 20;
-}
 .about-text{
 	font-family: source-code;
-	font-size: 11px;
+	font-size: 15px;
+	line-height: 21px;
 	color:#2d2d2d;
 	margin-left: 6%;
 	width: 88%;
@@ -358,7 +363,7 @@ body > * {
 	margin-bottom: 5%;
 }
 .project:hover{
-	background-size: 150% 120%;
+	background-size: 125% 105%;
 	background-color:#878787;
 }
 
@@ -468,7 +473,7 @@ body > * {
 	float: left;
 	margin-right: 20%;
 	font-family: source-code;
-	font-size: 11px;
+	font-size: 15px;
 	color:#2d2d2d;
 	border: 1px solid #2d2d2d;
 	margin-bottom: 10px;
